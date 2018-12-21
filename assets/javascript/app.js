@@ -49,12 +49,6 @@ var config = {
     var trainFirst = childSnapshot.val().first;
     var trainFrequency = childSnapshot.val().frequency;
   
-    // Log train info
-    // console.log("Name: " + trainName);
-    // console.log("Dest: " + trainDestination);
-    console.log("First: " + trainFirst);
-    // console.log("Freq: " + trainFrequency);
-  
     //Figuring out next arrival and minutes until next train from user input
 
       // Calculate how many minutes away the next train is by compaing next arrival time with the current time
@@ -85,12 +79,3 @@ var config = {
     // Append the new row to the table
     $("#train-table > tbody").append(newRow);
   });
-  
-  // Example Time Math
-  // -----------------------------------------------------------------------------
-  // Assume Employee start date of January 1, 2015
-  // Assume current date is March 1, 2016
-  
-  // We know that this is 15 months.
-  // Now we will create code in moment.js to confirm that any attempt we use meets this test case
-  
