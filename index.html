@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrainTime</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Main page container-->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="text-center">TrainTime</h1>
+      <h3 class="text-center">your one stop train scheduler</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Current Employees-->
+        <div class="card mb-4">
+          <div class="card-header">Train Schedule</div>
+          <div class="card-body">
+            <table class="table" id="train-table">
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add a train  -->
+        <div class="card mb-4">
+          <div class="card-header">Add a Train!</div>
+          <div class="card-body">
+
+            <!-- User input form -->
+            <form>
+              <div class="form-group">
+                <label for="train-name-input">Train Name</label>
+                <input class="form-control" id="train-name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="train-destination-input">Destination</label>
+                <input class="form-control" id="train-destination-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="train-first-input">First Train Time (hh:mm - military time)</label>
+                <input class="form-control" id="train-first-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="train-frequency-input">Frequency (min)</label>
+                <input class="form-control" id="train-frequency-input" type="text">
+              </div>
+              <button class="btn btn-primary float-left" id="add-train-btn">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
